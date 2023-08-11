@@ -25,10 +25,14 @@ let objArray = [
 ];
 function keyInObjectArray(objArray, keyString) {
   for (let i = 0; i < objArray.length; i++) {
-    let keys = Object.keys(objArray[i]);
-    if (keys.includes(keyString)) {
+    let obj = objArray[i];
+    if (keyString in obj) {
       return true;
     }
+    // let keys = Object.keys(objArray[i]);
+    // if (keys.includes(keyString)) {
+    //   return true;
+    // }
   }
   return false;
 }
